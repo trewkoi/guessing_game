@@ -1,7 +1,5 @@
 let correctGuess = Math.floor(Math.random() * 10)
 
-console.log(correctGuess)
-
 const tries = []
 
 const guess = document.getElementById("inputNumber")
