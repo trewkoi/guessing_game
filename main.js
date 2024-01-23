@@ -1,6 +1,6 @@
 let correctGuess = Math.floor(Math.random() * 10)
 
-const tries = []
+let tries = []
 
 const guess = document.getElementById("inputNumber")
 
@@ -13,6 +13,8 @@ document.getElementById("makeGuess").addEventListener("click", (ev) => {
         document.querySelector(".screen2").classList.toggle("hide")
         
         document.querySelector(".success").innerText = `Successful in ${tries.length} tries`
+        tries = []
+        correctGuess = Math.floor(Math.random() * 10)
     } else {
         tries.push(guess.value)
         guess.value = ""
